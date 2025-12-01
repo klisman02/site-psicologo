@@ -1,7 +1,3 @@
-/* ESSENCIAL: Estas três linhas carregam as funcionalidades do Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Estilos globais mínimos */
 body {
