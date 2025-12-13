@@ -1,0 +1,95 @@
+/* ----------- RESET ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f1f5f9; /* cinza claro */
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Containers */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Botões */
+.button,
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.button-primary,
+.btn-primary {
+  background: #1e40af;
+  color: #fff;
+}
+
+.button-primary:hover,
+.btn-primary:hover {
+  background: #1e3a8a;
+}
+
+/* Texto suave */
+.muted {
+  color: #64748b;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  background-color: #25d366;
+  color: #ffffff;
+
+  padding: 14px 20px;
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-float::before {
+  content: "💬";
+  font-size: 1.2rem;
+}
+
+.whatsapp-float::before {
+  content: "🟢";
+  font-size: 0.8rem;
+}

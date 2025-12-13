@@ -1,0 +1,37 @@
+/* ---------- HERO ---------- */
+
+.hero {
+  background: linear-gradient(135deg, #e0e7ff, #f1f5f9);
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+/* ---------- SEÇÕES ---------- */
+
+.section {
+  margin: 3rem 0;
+}
+
+.section-light {
+  background: #f8fafc;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1e40af;
+}
+
+.container-card {
+  max-width: 900px;
+  margin: 0 auto;
+}

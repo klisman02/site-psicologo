@@ -12,6 +12,12 @@ const patientRoutes = require('./routes/PatientRoutes');
 const appointmentRoutes = require('./routes/AppointmentRoutes'); // Rotas Protegidas (Psicólogo)
 const publicRoutes = require('./routes/publicRoutes'); // Rotas Públicas (Paciente)
 
+const path = require('path');
+
+// arquivos estáticos (HTML, CSS, JS, imagens)
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 // 2. Middlewares
 app.use(cors()); 
 app.use(express.json()); 
@@ -38,7 +44,7 @@ app.use('/api/public', publicRoutes);
 
 
 // 5. Rota de Teste (Health Check)
-app.get('/', (req, res) => {
+app.get('/api/health', (req, res) => {
   res.status(200).json({ 
     message: 'API do Psicólogo online!',
     environment: process.env.NODE_ENV || 'development'

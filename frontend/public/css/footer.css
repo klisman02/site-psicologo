@@ -1,0 +1,14 @@
+/* ---------- RODAPÉ ---------- */
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0.4rem 0;
+  color: #475569;
+}
