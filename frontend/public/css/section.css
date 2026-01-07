@@ -68,3 +68,36 @@
   background: #1e3a8a;
 }
 
+.section-intro {
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.help-card {
+  background: #f8fafc;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  text-align: left;
+}
+
+.help-card:hover {
+  transform: translateY(-4px);
+}
+
+.help-card img {
+  width: 56px;
+  margin-bottom: 0.8rem;
+}
+
+.help-card h3 {
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}

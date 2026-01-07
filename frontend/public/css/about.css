@@ -1,5 +1,4 @@
 /* ---------- ABOUT PAGE ---------- */
-
 .about-page {
   margin-top: 2rem;
   margin-bottom: 4rem;
@@ -47,11 +46,33 @@
   color: #1e3a8a;
   margin-bottom: 1rem;
 }
+section .section-title{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
 .about-section p {
   color: #475569;
   margin-bottom: 1rem;
 }
+
+.profile-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image.end {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.profile-image img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
 
 /* DESTAQUE */
 .about-highlight {
@@ -73,7 +94,6 @@
 }
 
 .about-list li::before {
-  content: "•";
   position: absolute;
   left: 0;
   color: #1e40af;
