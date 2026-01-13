@@ -224,4 +224,27 @@ section .section-title{
     grid-template-columns: 1fr;
   }
 }
+
 /* ---------- FIM ABOUT PAGE ---------- */
+@media (max-width: 768px) {
+  .about-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .profile-image img {
+    max-width: 220px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
