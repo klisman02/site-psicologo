@@ -1,4 +1,4 @@
-/* ---------- ABOUT PAGE ---------- */
+---------- ABOUT PAGE ----------
 .about-page {
   margin-top: 2rem;
   margin-bottom: 4rem;
@@ -25,7 +25,7 @@
 }
 
 /* TEXTO */
-.about-intro h1 {
+.section-title, .about-intro h1 {
   font-size: 2rem;
   color: #1e40af;
   margin-bottom: 1rem;
@@ -51,35 +51,44 @@ section .section-title{
   margin-bottom: 1.5rem;
 }
 
-.about-section p {
+.about-float-text p, .about-section p {
   color: #475569;
   margin-bottom: 1rem;
 }
 
 .profile-image {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.profile-image.end {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-image img {
-  max-width: 280px;
+  max-width: 260px;
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
+
+.profile-image.start {
+  justify-content: flex-start;
+}
+
+.profile-image.end {
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
 
 
 /* DESTAQUE */
 .about-highlight {
   background: #eef2ff;
-  padding: 2rem;
+  padding: 1.8rem 2rem;
   border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1e293b;
 }
+
 
 /* LISTA */
 .about-list {
@@ -98,6 +107,20 @@ section .section-title{
   left: 0;
   color: #1e40af;
   font-weight: bold;
+}
+/* ABOUT TEXT */
+.about-text {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+.about-text p {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+.about-float-text {
+  padding-top: 4rem; /* <-- aqui você controla o "descer" */
 }
 
 /* CTA */
@@ -127,3 +150,78 @@ section .section-title{
     margin: 0 auto;
   }
 }
+
+/* --- FOTO FLUTUADA (TEXTO AO LADO / TEXT WRAP) --- */
+
+.about-text-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-float-image {
+  float: left;
+  width: 260px;              /* controla o tamanho */
+  max-width: 40%;            /* evita estourar em telas menores */
+  margin: 0 2rem 1rem 0;     /* espaço entre foto e texto */
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Mobile: imagem vira bloco e texto vai pra baixo */
+@media (max-width: 768px) {
+  .about-float-image {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 1.25rem;
+  }
+}
+
+/* --- PARA QUEM É A TERAPIA (CARDS) --- */
+
+.therapy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.therapy-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: #f8fafc;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.therapy-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #1e40af;
+  color: #fff;
+  font-weight: 700;
+  flex: 0 0 28px;
+  margin-top: 2px;
+}
+
+.therapy-card p {
+  margin: 0;
+  color: #334155;
+  line-height: 1.55;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .therapy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ---------- FIM ABOUT PAGE ---------- */

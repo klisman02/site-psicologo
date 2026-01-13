@@ -11,70 +11,58 @@
   <link rel="stylesheet" href="css/footer.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo">Psicologia do Bem</div>
-        <div class="tagline">Acolhimento, clareza e transformação</div>
 
-              <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-
-      </div>
-
-      <nav class="main-nav">
-       <a href="index.html">Início</a>
-        <a href="about.html">Quem sou eu</a>
-        <a class="btn btn-cta" href="appointment.html">Agendar</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo">Psicologia do Bem</div>
+      <div class="tagline">Acolhimento, clareza e transformação</div>
     </div>
-  </header>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="about.html">Quem sou eu</a>
+      <a class="btn btn-cta" href="appointment.html">Agendar</a>
+    </nav>
+  </div>
+</header>
+
 
   <main class="page container">
 <main class="page container about-page">
 
   <!-- BLOCO PRINCIPAL -->
   <section class="section">
-  <div class="container-card card">
+  <div class="container-card card about">
+
     <h2 class="section-title">Quem sou eu</h2>
 
-    <div class="profile-image">
-      <img src="imagens/sentado-na-cadeira.jpg" alt="Psicólogo responsável pela Psicologia do Bem">
-    </div>
+<div class="about-text about-text-wrap">
+  <img
+    src="imagens/sentado-na-cadeira.jpg"
+    alt="Psicólogo responsável pela Psicologia do Bem"
+    class="about-float-image"
+  >
 
+  <div class="about-float-text">
     <p>
-      Busquei a Psicologia como carreira porque, desde sempre, 
-      fui o amigo que ouvia o desabafo de todo mundo. 
-      Descobri na primeira semana de aula na faculdade que 
-      a doutrina da cura pela fala vai muito além disso – 
-      e me identifiquei ainda mais.
+      Busquei a Psicologia como carreira porque, desde sempre, fui aquele amigo
+      que as pessoas procuravam para conversar, desabafar e se sentirem ouvidas.
     </p>
 
     <p>
-      Me especializei posteriormente em Psicologia Hospitalar 
-      e Gestão de Recursos Humanos, onde pude atuar com 
-      treinamentos e desenvolvimento de pessoas.
+      Logo na primeira semana de aula, percebi que a cura pela fala vai muito além
+      do que eu imaginava — e ali entendi que estava no caminho certo.
     </p>
+  </div>
+</div>
 
-    <p>
-      Apliquei terapias e intervenções em diversas instituições, 
-      grupos e contextos, desde instituições educacionais infantis 
-      até o Alcoólicos Anônimos.
-    </p>
-
-    <p>
-      Hoje, além de ainda prestar consultoria na área de 
-      Gestão & Desenvolvimento e realizar palestras em 
-      escolas e grupos sociais, me dedico principalmente 
-      à área Clínica para aperfeiçoamento mútuo – 
-      meu e dos meus pacientes.
-    </p>
-
-    <div class="profile-image end">
-      <img src="imagens/segurando-livro.jpg" alt="Psicólogo em momento profissional">
-    </div>
 
   </div>
 </section>
+
 
 
   <!-- TRAJETÓRIA -->
@@ -111,16 +99,33 @@
   </section>
 
   <!-- PARA QUEM É -->
-  <section class="about-section">
-    <h2>Para quem é a terapia</h2>
+<section class="about-section">
+  <h2>Para quem é a terapia</h2>
 
-    <ul class="about-list">
-      <li>Pessoas que lidam com ansiedade e estresse</li>
-      <li>Dificuldades nos relacionamentos</li>
-      <li>Momentos de transição ou crise</li>
-      <li>Busca por autoconhecimento e desenvolvimento pessoal</li>
-    </ul>
-  </section>
+  <div class="therapy-grid">
+    <div class="therapy-card">
+      <span class="therapy-icon" aria-hidden="true">✓</span>
+      <p>Pessoas que lidam com ansiedade e estresse</p>
+    </div>
+
+    <div class="therapy-card">
+      <span class="therapy-icon" aria-hidden="true">✓</span>
+      <p>Dificuldades nos relacionamentos</p>
+    </div>
+
+    <div class="therapy-card">
+      <span class="therapy-icon" aria-hidden="true">✓</span>
+      <p>Momentos de transição ou crise</p>
+    </div>
+
+    <div class="therapy-card">
+      <span class="therapy-icon" aria-hidden="true">✓</span>
+      <p>Busca por autoconhecimento e desenvolvimento pessoal</p>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- CTA FINAL -->
   <section class="about-cta card">
@@ -131,7 +136,7 @@
     </p>
 
     <a 
-      href="https://wa.me/5511990189217?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
+      href="https://wa.me/5511990189217?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
       class="button button-primary"
     >
       Agendar conversa

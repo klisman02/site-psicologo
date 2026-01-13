@@ -205,3 +205,195 @@
 .container-card{
   margin: 50px;
 }
+
+/* ===== Header layout base ===== */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Botão do menu (escondido no desktop) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 10px;
+}
+
+.menu-toggle:focus {
+  outline: 2px solid rgba(30, 64, 175, 0.35);
+  outline-offset: 2px;
+}
+
+/* Nav desktop */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ===== Mobile / Tablet ===== */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Nav vira dropdown */
+  .main-nav {
+    position: absolute;
+    top: 72px;               /* ajuste se seu header for mais alto/baixo */
+    right: 1.5rem;
+    left: 1.5rem;
+
+    display: grid;
+    gap: 0.5rem;
+
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 0.9rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 1200;
+  }
+
+  /* Quando abrir */
+  .main-nav.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .main-nav a {
+    padding: 0.75rem 0.8rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1e293b;
+  }
+
+  .main-nav a:hover {
+    background: #f1f5f9;
+  }
+
+  /* Botão CTA ocupa largura toda no mobile */
+  .main-nav .btn-cta {
+    justify-self: stretch;
+    text-align: center;
+    padding: 0.85rem 1rem;
+  }
+
+  /* Importante: header precisa ser referência pro dropdown */
+  .site-header {
+    position: sticky; /* ou relative, se você preferir */
+    top: 0;
+    z-index: 1300;
+    background: #fff;
+  }
+
+  .header-inner {
+    position: relative;
+  }
+}
+
+/* ===== HEADER BASE ===== */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Botão (desktop escondido) */
+.menu-toggle {
+  display: none;
+  border: 0;
+  cursor: pointer;
+
+  width: 40px;
+  height: 34px;
+  border-radius: 10px;
+
+  background: #1e40af;
+  color: #fff;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+.menu-toggle:active {
+  transform: translateY(1px);
+}
+
+/* ===== MOBILE/TABLET ===== */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Menu dropdown fechado por padrão */
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 12px;
+    right: 12px;
+
+    display: grid;
+    gap: 8px;
+
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 2000;
+  }
+
+  /* Menu aberto */
+  .main-nav.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .main-nav a {
+    padding: 12px;
+    border-radius: 12px;
+    color: #1e293b;
+    text-decoration: none;
+  }
+
+  .main-nav a:hover {
+    background: #f1f5f9;
+  }
+
+  .main-nav .btn-cta {
+    text-align: center;
+    padding: 12px;
+  }
+}
+/* Importante: header precisa ser referência pro dropdown */

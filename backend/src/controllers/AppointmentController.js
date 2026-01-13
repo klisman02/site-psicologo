@@ -91,15 +91,15 @@ const updateAppointment = async (req, res) => {
 // ====================================================================
 
 // GET /api/public/available-slots
-const getPublicAvailableSlots = async (req, res) => {
-    try {
-        const slots = await AppointmentModel.getAvailableSlots();
-        return res.status(200).json(slots);
-    } catch (error) {
-        console.error("Erro ao listar slots públicos:", error);
-        return res.status(500).json({ message: 'Erro interno ao listar horários disponíveis.' });
-    }
-};
+// const getPublicAvailableSlots = async (req, res) => {
+//     try {
+//         const slots = await AppointmentModel.getAvailableSlots();
+//         return res.status(200).json(slots);
+//     } catch (error) {
+//         console.error("Erro ao listar slots públicos:", error);
+//         return res.status(500).json({ message: 'Erro interno ao listar horários disponíveis.' });
+//     }
+// };
 
 // POST /api/public/request-appointment
 const requestPublicAppointment = async (req, res) => {

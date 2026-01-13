@@ -21,10 +21,18 @@
       <div class="tagline">Acolhimento, clareza e transformação</div>
     </div>
 
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      ☰
+    </button>
 
-    <nav class="main-nav">
-      <a href="">Início</a>
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Início</a>
       <a href="about.html">Quem sou eu</a>
       <a class="btn btn-cta" href="appointment.html">Agendar</a>
     </nav>
@@ -35,7 +43,7 @@
 
 <section class="hero card">
   <div class="hero-inner">
-    <h1>Bem-vindo à Psicologia do Bem</h1>
+    <h1>Bem-vindo(a) à Psicologia do Bem</h1>
     <p>
       Espaço seguro para cuidar da sua saúde mental com empatia, respeito e técnica profissional.
     </p>

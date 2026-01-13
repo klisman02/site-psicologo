@@ -10,55 +10,85 @@
   <link rel="stylesheet" href="css/form.css" />
   <link rel="stylesheet" href="css/footer.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div class="logo">Psicologia do Bem</div>
-        <div class="tagline">Acolhimento, clareza e transformação</div>
-      </div>
-      <nav class="main-nav">
-       <a href="index.html">Início</a>
-        <a href="about.html">Quem sou eu</a>
-        <a class="btn btn-cta" href="appointment.html">Agendar</a>
-      </nav>
-                <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo">Psicologia do Bem</div>
+      <div class="tagline">Acolhimento, clareza e transformação</div>
     </div>
 
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >☰</button>
 
-  </header>
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="about.html">Quem sou eu</a>
+      <a class="btn btn-cta" href="appointment.html">Agendar</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="page container">
-    <section class="card">
-      <h1>Solicitar Agendamento</h1>
+<main class="page container">
+  <section class="card">
+    <h1>Solicitar Agendamento</h1>
 
-      <form id="appointment-form" class="form">
-        <label for="appointment_id">Horário disponível</label>
-        <select id="appointment_id" required>
-          <option value="">Carregando horários...</option>
-        </select>
+    <form id="appointment-form" class="form" novalidate>
+      <label for="full_name">Nome completo</label>
+      <input id="full_name" name="full_name" type="text" placeholder="Seu nome completo" required />
 
-        <label for="full_name">Nome completo</label>
-        <input id="full_name" type="text" placeholder="Seu nome completo" required />
+      <label for="contact_phone">Telefone</label>
+      <input
+        id="contact_phone"
+        name="contact_phone"
+        type="tel"
+        inputmode="numeric"
+        autocomplete="tel"
+        placeholder="(11) 9999-9999"
+        maxlength="15"
+        required
+      />
 
-        <label for="contact_phone">Telefone</label>
-        <input id="contact_phone" type="tel" placeholder="(XX) XXXXX-XXXX" required />
+      <label for="whatsapp">WhatsApp</label>
+      <input
+        id="whatsapp"
+        name="whatsapp"
+        type="tel"
+        inputmode="numeric"
+        autocomplete="tel"
+        placeholder="(11) 99999-9999"
+        maxlength="15"
+        required
+      />
 
-        <label for="whatsapp">WhatsApp (opcional)</label>
-        <input id="whatsapp" type="text" placeholder="Número do WhatsApp" />
+      <label for="email">E-mail</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="seuemail@exemplo.com"
+        autocomplete="email"
+        inputmode="email"
+        required
+      />
 
-        <label for="initial_complaint">Queixa inicial</label>
-        <textarea id="initial_complaint" rows="5" placeholder="Descreva brevemente sua queixa" required></textarea>
+      <label for="initial_complaint">Queixa inicial</label>
+      <textarea id="initial_complaint" name="initial_complaint" rows="5" placeholder="Descreva brevemente sua queixa" required></textarea>
 
-        <div class="form-actions">
-          <button type="submit" class="button button-primary">Enviar solicitação</button>
-        </div>
+      <div class="form-actions">
+        <button type="submit" class="button button-primary">Enviar solicitação</button>
+      </div>
 
-        <div id="form-message" class="form-message" aria-live="polite"></div>
-      </form>
-    </section>
-  </main>
-
+      <div id="form-message" class="form-message" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
 
 <a
   href="https://wa.me/5511990189217?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta"
@@ -70,8 +100,7 @@
   <span class="whatsapp-text">Fale comigo no WhatsApp</span>
 </a>
 
-  <script src="js/appointment.js"></script>
-  <script src="js/menu.js"></script>
-
+<script src="js/appointment.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>

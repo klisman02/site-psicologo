@@ -86,17 +86,17 @@ const updateAppointmentStatus = async (appointmentId, userId, newStatus, patient
  * Lista todos os slots 'AVAILABLE' (disponíveis) para que o paciente escolha.
  * @returns {Array} Slots disponíveis que ainda não passaram.
  */
-const getAvailableSlots = async () => {
-    const query = `
-        SELECT id, appointment_time
-        FROM appointments 
-        WHERE status = 'AVAILABLE' AND appointment_time > NOW()
-        ORDER BY appointment_time ASC
-    `;
-    // Não precisa de user_id aqui, pois queremos todos os horários disponíveis
-    const { rows } = await db.query(query);
-    return rows;
-};
+// const getAvailableSlots = async () => {
+//     const query = `
+//         SELECT id, appointment_time
+//         FROM appointments 
+//         WHERE status = 'AVAILABLE' AND appointment_time > NOW()
+//         ORDER BY appointment_time ASC
+//     `;
+//     // Não precisa de user_id aqui, pois queremos todos os horários disponíveis
+//     const { rows } = await db.query(query);
+//     return rows;
+// };
 
 /**
  * Paciente solicita um agendamento, preenchendo os dados e mudando o status para 'PENDING'.
@@ -107,30 +107,30 @@ const getAvailableSlots = async () => {
  * @param {string} initialComplaint Queixa inicial.
  * @returns {Object | null} O agendamento atualizado para PENDING.
  */
-const requestAppointment = async (appointmentId, fullName, contactPhone, whatsapp, initialComplaint) => {
-    const query = `
-        UPDATE appointments 
-        SET 
-            status = 'PENDING', 
-            requested_full_name = $1,
-            requested_contact_phone = $2,
-            requested_whatsapp = $3,
-            requested_initial_complaint = $4,
-            updated_at = CURRENT_TIMESTAMP
-        WHERE id = $5 AND status = 'AVAILABLE' -- Apenas slots DISPONÍVEIS podem ser solicitados
-        RETURNING *
-    `;
-    const values = [
-        fullName, 
-        contactPhone, 
-        whatsapp, 
-        initialComplaint, 
-        appointmentId
-    ];
+// const requestAppointment = async (appointmentId, fullName, contactPhone, whatsapp, initialComplaint) => {
+//     const query = `
+//         UPDATE appointments 
+//         SET 
+//             status = 'PENDING', 
+//             requested_full_name = $1,
+//             requested_contact_phone = $2,
+//             requested_whatsapp = $3,
+//             requested_initial_complaint = $4,
+//             updated_at = CURRENT_TIMESTAMP
+//         WHERE id = $5 AND status = 'AVAILABLE' -- Apenas slots DISPONÍVEIS podem ser solicitados
+//         RETURNING *
+//     `;
+//     const values = [
+//         fullName, 
+//         contactPhone, 
+//         whatsapp, 
+//         initialComplaint, 
+//         appointmentId
+//     ];
     
-    const { rows } = await db.query(query, values);
-    return rows[0];
-};
+//     const { rows } = await db.query(query, values);
+//     return rows[0];
+// };
 
 module.exports = {
     createAvailableSlot,
