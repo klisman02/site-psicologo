@@ -99,7 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
         initial_complaint
       };
 
-      const res = await fetch(`${API_BASE}/public/request-appointment`, {
+      // ✅ NOVO ENDPOINT (opção 2)
+      const res = await fetch(`${API_BASE}/public/contact-request`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -107,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (res.ok) {
         const body = await res.json().catch(() => ({}));
-        showMessage(body.message || "Solicitação enviada. Aguarde confirmação.", "success");
+        showMessage(body.message || "Solicitação enviada. Aguarde contato.", "success");
         form.reset();
       } else {
         const err = await res.json().catch(() => ({}));

@@ -79,6 +79,20 @@
   gap: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .help-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .help-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
 .help-card {
   background: #f8fafc;
   padding: 1.2rem;

@@ -10,6 +10,7 @@ body {
   background: #f1f5f9; /* cinza claro */
   color: #1e293b;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 .psychologist-intro {
   text-align: center;
@@ -114,7 +115,7 @@ body {
   font-size: 0.8rem;
 } */
 
-@media (max-width: 768px) {
+@media (max-width: 915px) {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;

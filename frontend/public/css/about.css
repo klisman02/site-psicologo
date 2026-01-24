@@ -226,7 +226,7 @@ section .section-title{
 }
 
 /* ---------- FIM ABOUT PAGE ---------- */
-@media (max-width: 768px) {
+@media (max-width: 915px) {
   .about-row {
     display: flex;
     flex-direction: column;
@@ -248,3 +248,44 @@ section .section-title{
   }
 }
 
+/* Mobile: ABOUT full width */
+@media (max-width: 768px) {
+  /* remove a limitação do container nessa página */
+  main.page.about-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* seção "Quem sou eu" ocupa toda a tela */
+  .container-card.card.about {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;          /* opcional: fica “tela inteira” */
+  }
+
+  /* dá respiro interno sem estreitar o card */
+  .container-card.card.about {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* garante que o texto não fique espremido */
+  .about-text {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;        /* 1.5rem no celular fica grande demais */
+    line-height: 1.6;
+  }
+
+  /* sua imagem flutuante já está ok, só garantindo 100% */
+  .about-float-image {
+    max-width: 320px;
+  }
+}

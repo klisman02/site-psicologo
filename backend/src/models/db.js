@@ -7,6 +7,7 @@ const pool = new Pool({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
+  ssl: process.env.NODE_ENV === 'production' ? true : false,
 });
 
 // A função query será usada em todos os modelos para executar comandos SQL
